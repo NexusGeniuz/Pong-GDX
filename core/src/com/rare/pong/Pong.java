@@ -2,23 +2,21 @@ package com.rare.pong;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
+import com.rare.pong.scenes.Game1v1;
 
 public class Pong extends Game {
-	
 	@Override
 	public void create () {
-
+		setScreen(new Game1v1(this));
 	}
 
 	@Override
 	public void render () {
-		Gdx.gl.glClearColor(0, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		screen.render(Gdx.graphics.getDeltaTime());
 	}
 	
 	@Override
 	public void dispose () {
-
+		screen.dispose();
 	}
 }
