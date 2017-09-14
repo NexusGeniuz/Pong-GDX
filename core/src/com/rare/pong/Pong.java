@@ -7,7 +7,7 @@ import com.rare.pong.scenes.Game1v1;
 public class Pong extends Game {
 	@Override
 	public void create () {
-		setScreen(new Game1v1(this));
+		setScreen(new Game1v1());
 	}
 
 	@Override

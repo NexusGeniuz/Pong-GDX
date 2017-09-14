@@ -1,6 +1,5 @@
 package com.rare.pong.scenes;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -9,12 +8,10 @@ import com.rare.pong.Paddle;
 import com.rare.pong.Puck;
 
 public class Game1v1 implements Screen {
-    private Game game;
     private Paddle leftP, rightP;
     private Puck puck;
 
-    public Game1v1(Game game) {
-        this.game = game;
+    public Game1v1() {
         puck = new Puck();
         leftP = new Paddle(15, Gdx.graphics.getHeight()/2 - 100/2, Input.Keys.A, Input.Keys.Z);
         rightP = new Paddle(Gdx.graphics.getWidth() - 15*2, Gdx.graphics.getHeight()/2 - 100/2, Input.Keys.K, Input.Keys.M);
@@ -27,7 +24,7 @@ public class Game1v1 implements Screen {
 
         leftP.update(delta);
         rightP.update(delta);
-        puck.update(delta);
+        puck.update(delta, leftP, rightP);
     }
 
     @Override
