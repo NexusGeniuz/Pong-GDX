@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e61d76c8-8f3d-4491-82ef-5d0f1f8156b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/PaddleAI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/assets/creditsScreen.png" afterPath="$PROJECT_DIR$/core/assets/creditsScreen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/out/production/classes/com/rare/pong/scenes/MainMenu.class" afterPath="$PROJECT_DIR$/core/out/production/classes/com/rare/pong/scenes/MainMenu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/Game.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/PaddleP.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/PaddleP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/PaddleAI.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/PaddleAI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/Puck.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/Puck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/Score.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/Score.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/scenes/Credits.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/scenes/Credits.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/scenes/GameVsAI.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/scenes/GameVsAI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/rare/pong/scenes/MainMenu.java" afterPath="$PROJECT_DIR$/core/src/com/rare/pong/scenes/MainMenu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -71,12 +68,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Score.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-446">
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PaddleAI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/PaddleAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="459">
+              <caret line="27" column="124" lean-forward="false" selection-start-line="27" selection-start-column="124" selection-end-line="27" selection-end-column="124" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,12 +93,30 @@
       <file leaf-file-name="Paddle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+            <state relative-caret-position="187">
+              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
+                <element signature="e#844#845#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Puck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Puck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1309">
+              <caret line="77" column="60" lean-forward="true" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4571#4572#0" expanded="true" />
+                <element signature="e#4597#4598#0" expanded="true" />
+                <element signature="e#4628#4629#0" expanded="true" />
+                <element signature="e#4654#4655#0" expanded="true" />
+                <element signature="e#4684#4685#0" expanded="true" />
+                <element signature="e#4711#4712#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -832,16 +859,16 @@
       <list>
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/GameScreen.java" />
         <option value="$PROJECT_DIR$/desktop/src/com/rare/pong/desktop/DesktopLauncher.java" />
-        <option value="$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/Pong.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/scenes/Game1v1.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/Score.java" />
-        <option value="$PROJECT_DIR$/core/src/com/rare/pong/Puck.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/PaddleP.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/scenes/GameVsAI.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/Game.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/scenes/Credits.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/scenes/MainMenu.java" />
+        <option value="$PROJECT_DIR$/core/src/com/rare/pong/Puck.java" />
+        <option value="$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java" />
         <option value="$PROJECT_DIR$/core/src/com/rare/pong/PaddleAI.java" />
       </list>
     </option>
@@ -1147,7 +1174,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1174,6 +1201,12 @@
           <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1213,6 +1246,12 @@
           <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1230,7 +1269,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1251,7 +1290,7 @@
         <state relative-caret-position="391">
           <caret line="25" column="79" lean-forward="false" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1270,6 +1309,12 @@
           <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1327,6 +1372,12 @@
           <caret line="44" column="102" lean-forward="true" selection-start-line="44" selection-start-column="102" selection-end-line="44" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1344,7 +1395,7 @@
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1392,6 +1443,12 @@
           <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1439,6 +1496,12 @@
           <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1485,32 +1548,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Puck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/scenes/Credits.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1519,26 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/PaddleP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1573,11 +1596,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/PaddleP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-446">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Puck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="60" lean-forward="true" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
+            <element signature="e#4597#4598#0" expanded="true" />
+            <element signature="e#4628#4629#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4684#4685#0" expanded="true" />
+            <element signature="e#4711#4712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/Paddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/rare/pong/PaddleAI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="27" column="124" lean-forward="false" selection-start-line="27" selection-start-column="124" selection-end-line="27" selection-end-column="124" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

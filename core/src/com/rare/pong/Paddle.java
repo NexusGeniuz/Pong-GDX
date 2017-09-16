@@ -8,7 +8,8 @@ public abstract class Paddle {
     protected float x, y;
     protected float width = 15f;
     protected float height = 100f;
-    protected float speed = 700f;
+    protected float speed = 600f;
+    protected final int maxSpeed = 600;
     protected Score score;
     private ShapeRenderer shapeRenderer;
 

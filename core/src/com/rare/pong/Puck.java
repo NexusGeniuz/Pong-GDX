@@ -104,6 +104,18 @@ public class Puck {
         vel = new Vector2(speed * MathUtils.cos(angle), speed * MathUtils.sin(angle)); // Applying speed and angle to the velocity
     }
 
+    public Vector2 getPos() {
+        return pos;
+    }
+
+    public Vector2 getVel() {
+        return vel;
+    }
+
+    public float getSize() {
+        return size;
+    }
+
     public void dispose(){
         shapeRenderer.dispose();
     }
