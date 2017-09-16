@@ -5,7 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
-public abstract class Game implements Screen { // TODO CHECK FOR CLEANING
+public abstract class Game implements Screen {
     protected Puck puck;
     protected Pong pong;
     protected Score score;
@@ -30,7 +30,7 @@ public abstract class Game implements Screen { // TODO CHECK FOR CLEANING
         rightP.update(delta);
         puck.update(delta, leftP, rightP);
 
-        // Center line
+        // Drawing center line
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         for(int i = 0; i < Gdx.graphics.getHeight()/20f-1; i+=2){
             shapeRenderer.rect(Gdx.graphics.getWidth()/2f - 10f/2, 20f/2 + i * 20f, 10f, 20f);

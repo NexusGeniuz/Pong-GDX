@@ -34,7 +34,7 @@ public class Credits implements Screen {
         if(Gdx.input.getX() < Gdx.graphics.getWidth() / 2 + backButtonNormal.getWidth() / 2 && Gdx.input.getX() > Gdx.graphics.getWidth() / 2 - backButtonNormal.getWidth() / 2
                 && Gdx.graphics.getHeight() - Gdx.input.getY() < Gdx.graphics.getHeight() * .15f + backButtonNormal.getHeight() / 2 && Gdx.graphics.getHeight() - Gdx.input.getY() > Gdx.graphics.getHeight() * .15f - backButtonNormal.getHeight() / 2) {
             pong.batch.draw(backButtonOver, Gdx.graphics.getWidth() / 2 - backButtonOver.getWidth() / 2, Gdx.graphics.getHeight() * .15f - backButtonOver.getHeight() / 2);
-            if(Gdx.input.isTouched(0)){
+            if(Gdx.input.justTouched()){
                 pong.setScreen(new MainMenu(pong));
             }
         }

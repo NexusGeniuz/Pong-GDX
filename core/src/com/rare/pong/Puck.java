@@ -5,17 +5,17 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 
-public class Puck { // TODO CHECK FOR CLEANING
-    private Vector2 pos = new Vector2(Gdx.graphics.getWidth()/2f - 15f/2f, Gdx.graphics.getHeight()/2f - 15f/2f);
+public class Puck {
+    private Vector2 pos = new Vector2(Gdx.graphics.getWidth()/2f - 15f/2f, Gdx.graphics.getHeight()/2f - 15f/2f); // Spawn at the center
     private Vector2 vel;
     private float size = 15f;
-    private float minSpeed = 500f;
+    private int maxSpeed = 1200;
+    private int minSpeed = 500;
     private float speed;
     private float accelerationPercent = 1.002f;
-    private float maxSpeed = 1200f;
+    public boolean checkPaddles = false;
     private ShapeRenderer shapeRenderer;
     private Score score;
-    public boolean checkPaddles = false;
 
     public Puck(Score score){
         reset();
@@ -26,6 +26,7 @@ public class Puck { // TODO CHECK FOR CLEANING
     public void update(float dt, Paddle leftP, Paddle rightP){
         if(!score.gameOver) {
             glide(dt);
+
             if(checkPaddles)
                 checkCollisions(leftP, rightP);
 
@@ -49,7 +50,7 @@ public class Puck { // TODO CHECK FOR CLEANING
     public void glide(float dt){
         pos.add(new Vector2(vel.x * dt, vel.y * dt)); // Applying velocity to the position of the puck
 
-        if(checkPaddles) {
+        if(checkPaddles) { // If checkPaddles is enabled then check if the puck goes off the horizontal sides of the scene
             if (pos.x <= -size) { // LEFT
                 reset();
                 score.scoreRight();
@@ -88,7 +89,7 @@ public class Puck { // TODO CHECK FOR CLEANING
             pos.set(leftP.getX() + leftP.getWidth(), pos.y); // Avoiding bugs via positioning the puck just in front of the paddle
         } else if(pos.y <= rightP.getY() + rightP.getHeight() && pos.y + size >= rightP.getY() && pos.x + size >= rightP.getX() && pos.x <= rightP.getX() + rightP.getWidth()/2f) {
             // Same here
-            float diff = (pos.y + size/2f) - (rightP.getY() + rightP.getHeight()/2);
+            float diff = (pos.y + size/2f) - (rightP.getY() + rightP.getHeight()/2f);
             float angle = diff / (rightP.getHeight()/2f) * 45f;
             angle = MathUtils.clamp(angle, -45f, 45f) * MathUtils.degRad;
             vel = new Vector2(-Math.abs(speed * MathUtils.cos(angle)), Math.abs(speed) * MathUtils.sin(angle));
@@ -97,10 +98,10 @@ public class Puck { // TODO CHECK FOR CLEANING
     }
 
     private void reset(){
-        pos.set(Gdx.graphics.getWidth()/2f - size/2f, Gdx.graphics.getHeight()/2 - size/2); // Positioning the puck right in the centre
-        speed = minSpeed * (MathUtils.random() < 0.5f ? -1f : 1f);
+        pos.set(Gdx.graphics.getWidth()/2f - size/2f, Gdx.graphics.getHeight()/2 - size/2); // Positioning the puck right in the centre and resetting the speed
+        speed = minSpeed * (MathUtils.random() < 0.5f ? -1f : 1f); // Randomly choosing side to glide to starting with minSpeed
         float angle = MathUtils.random(-45f, 45f) * MathUtils.degRad;
-        vel = new Vector2(speed * MathUtils.cos(angle), speed * MathUtils.sin(angle));
+        vel = new Vector2(speed * MathUtils.cos(angle), speed * MathUtils.sin(angle)); // Applying speed and angle to the velocity
     }
 
     public void dispose(){

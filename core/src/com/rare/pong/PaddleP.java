@@ -26,6 +26,6 @@ public class PaddleP extends Paddle {
             y -= speed * dt;
         }
 
-        super.clampY();
+        clampY();
     }
 }
