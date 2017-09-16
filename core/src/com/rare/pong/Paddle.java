@@ -5,23 +5,26 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 
 public class Paddle {
-    private int x, y;
-    private int width = 15;
-    private int height = 100;
+    private float x, y;
+    private float width = 15f;
+    private float height = 100f;
     private ShapeRenderer shapeRenderer;
     private int upKey, downKey;
-    private int speed = 700;
+    private float speed = 700f;
+    private Score score;
 
-    public Paddle(int x, int y, int upKey, int downKey) {
+    public Paddle(float x, float y, int upKey, int downKey, Score score) {
         this.x = x;
         this.y = y;
         this.upKey = upKey;
         this.downKey = downKey;
+        this.score = score;
         shapeRenderer = new ShapeRenderer();
     }
 
     public void update(float dt){
-        handleInput(dt);
+        if(!score.gameOver)
+            handleInput(dt);
 
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         shapeRenderer.rect(x, y, width, height);
@@ -38,19 +41,19 @@ public class Paddle {
         y = MathUtils.clamp(y, 0, Gdx.graphics.getHeight() - height);
     }
 
-    int getX() {
+    float getX() {
         return x;
     }
 
-    int getY() {
+    float getY() {
         return y;
     }
 
-    int getWidth() {
+    float getWidth() {
         return width;
     }
 
-    int getHeight() {
+    float getHeight() {
         return height;
     }
 

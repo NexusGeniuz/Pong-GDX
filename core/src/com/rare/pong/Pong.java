@@ -2,12 +2,17 @@ package com.rare.pong;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.rare.pong.scenes.Game1v1;
+import com.rare.pong.scenes.MainMenu;
 
 public class Pong extends Game {
+	public SpriteBatch batch;
+
 	@Override
 	public void create () {
-		setScreen(new Game1v1());
+		batch = new SpriteBatch();
+		setScreen(new MainMenu(this));
 	}
 
 	@Override
@@ -18,5 +23,6 @@ public class Pong extends Game {
 	@Override
 	public void dispose () {
 		screen.dispose();
+		batch.dispose();
 	}
 }
