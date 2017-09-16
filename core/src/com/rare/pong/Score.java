@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.rare.pong.scenes.MainMenu;
 
-public class Score {
+public class Score { // TODO CHECK FOR CLEANING
     private int scoreL = 0;
     private int scoreR = 0;
     private final int WIN_SCORE = 10;

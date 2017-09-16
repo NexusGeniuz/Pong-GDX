@@ -15,24 +15,24 @@ public class MainMenu implements Screen {
     private Texture exitButtonOver;
     private Texture play1v1ButtonNormal;
     private Texture play1v1ButtonOver;
+    private Texture creditsButtonNormal;
+    private Texture creditsButtonOver;
     // TODO
     // private Texture playVsAIButtonNormal;
     // private Texture playVsAIButtonOver;
-    // private Texture creditsButtonNormal;
-    // private Texture creditsButtonOver;
 
     public MainMenu(Pong pong) {
         this.pong = pong;
         // Loading buttons
         play1v1ButtonNormal = new Texture(Gdx.files.internal("buttons/play1v1but_n.png"));
         play1v1ButtonOver = new Texture(Gdx.files.internal("buttons/play1v1but_o.png"));
+        creditsButtonNormal = new Texture(Gdx.files.internal("buttons/creditsbut_n.png"));
+        creditsButtonOver = new Texture(Gdx.files.internal("buttons/creditsbut_o.png"));
         exitButtonNormal = new Texture(Gdx.files.internal("buttons/exitbut_n.png"));
         exitButtonOver = new Texture(Gdx.files.internal("buttons/exitbut_o.png"));
         //TODO
-        // playVsAIButtonNormal = new Texture(Gdx.files.internal("buttons/playvsaibut_n.png));
-        // playVsAIButtonOver = new Texture(Gdx.files.internal("buttons/playvsaibut_o.png));
-        // creditsButtonNormal = new Texture(Gdx.files.internal("buttons/creditsbut_n.png));
-        // creditsButtonOver = new Texture(Gdx.files.internal("buttons/creditsbut_o.png));
+        // playVsAIButtonNormal = new Texture(Gdx.files.internal("buttons/playvsaibut_n.png"));
+        // playVsAIButtonOver = new Texture(Gdx.files.internal("buttons/playvsaibut_o.png"));
 
         puck = new Puck(null);
     }
@@ -42,10 +42,9 @@ public class MainMenu implements Screen {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        // TODO RENDER Buttons and make them clickable
         pong.batch.begin();
-
         // Drawing buttons
+        // Play 1v1 button
         if(Gdx.input.getX() < Gdx.graphics.getWidth() / 2 + play1v1ButtonNormal.getWidth() / 2 && Gdx.input.getX() > Gdx.graphics.getWidth() / 2 - play1v1ButtonNormal.getWidth() / 2
             && Gdx.graphics.getHeight() - Gdx.input.getY() < Gdx.graphics.getHeight() * .75f + play1v1ButtonNormal.getHeight() / 2 && Gdx.graphics.getHeight() - Gdx.input.getY() > Gdx.graphics.getHeight() * .75f - play1v1ButtonOver.getHeight() / 2) {
             pong.batch.draw(play1v1ButtonOver, Gdx.graphics.getWidth() / 2 - play1v1ButtonOver.getWidth() / 2, Gdx.graphics.getHeight() * .75f - play1v1ButtonOver.getHeight() / 2);
@@ -55,6 +54,18 @@ public class MainMenu implements Screen {
         }
         else
             pong.batch.draw(play1v1ButtonNormal, Gdx.graphics.getWidth() / 2 - play1v1ButtonNormal.getWidth() / 2, Gdx.graphics.getHeight() * .75f - play1v1ButtonNormal.getHeight() / 2);
+
+        // Credits button
+        if(Gdx.input.getX() < Gdx.graphics.getWidth() / 2 + creditsButtonNormal.getWidth() / 2 && Gdx.input.getX() > Gdx.graphics.getWidth() / 2 - creditsButtonNormal.getWidth() / 2
+                && Gdx.graphics.getHeight() - Gdx.input.getY() < Gdx.graphics.getHeight() * .4f + creditsButtonNormal.getHeight() / 2 && Gdx.graphics.getHeight() - Gdx.input.getY() > Gdx.graphics.getHeight() * .4f - creditsButtonNormal.getHeight() / 2){
+            pong.batch.draw(creditsButtonOver, Gdx.graphics.getWidth()/2 - creditsButtonOver.getWidth()/2, Gdx.graphics.getHeight()*.4f - creditsButtonOver.getHeight()/2);
+            if(Gdx.input.isTouched(0)){
+                pong.setScreen(new Credits(pong));
+            }
+        } else
+            pong.batch.draw(creditsButtonNormal, Gdx.graphics.getWidth()/2 - creditsButtonNormal.getWidth()/2, Gdx.graphics.getHeight()*.4f - creditsButtonNormal.getHeight()/2);
+
+        // Exit button
         if(Gdx.input.getX() < Gdx.graphics.getWidth() / 2 + exitButtonNormal.getWidth() / 2 && Gdx.input.getX() > Gdx.graphics.getWidth() / 2 - exitButtonNormal.getWidth() / 2
                 && Gdx.graphics.getHeight() - Gdx.input.getY() < Gdx.graphics.getHeight() * .25f + exitButtonNormal.getHeight() / 2 && Gdx.graphics.getHeight() - Gdx.input.getY() > Gdx.graphics.getHeight() * .25f - exitButtonNormal.getHeight() / 2) {
             pong.batch.draw(exitButtonOver, Gdx.graphics.getWidth() / 2 - exitButtonOver.getWidth() / 2, Gdx.graphics.getHeight() * .25f - exitButtonOver.getHeight() / 2);
@@ -66,7 +77,6 @@ public class MainMenu implements Screen {
             pong.batch.draw(exitButtonNormal, Gdx.graphics.getWidth()/2 - exitButtonNormal.getWidth()/2, Gdx.graphics.getHeight()*.25f - exitButtonNormal.getHeight()/2);
         //TODO
         // pong.batch.draw(playVsAIButtonNormal, Gdx.graphics.getWidth()/2 - playVsAIButtonNormal.getWidth()/2, Gdx.graphics.getHeight()*.5f - playVsAIButtonNormal.getHeight()/2);
-        // pong.batch.draw(creditsButtonNormal, Gdx.graphics.getWidth()/2 - creditsButtonNormal.getWidth()/2, Gdx.graphics.getHeight()*.4f - creditsButtonNormal.getHeight()/2);
 
         pong.batch.end();
 
@@ -78,6 +88,13 @@ public class MainMenu implements Screen {
     @Override
     public void dispose() {
         puck.dispose();
+        exitButtonNormal.dispose();
+        exitButtonOver.dispose();
+        play1v1ButtonNormal.dispose();
+        play1v1ButtonOver.dispose();
+        creditsButtonNormal.dispose();
+        creditsButtonOver.dispose();
+        // TODO Dispose 2 ai buttons
     }
 
     @Override

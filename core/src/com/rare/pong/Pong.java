@@ -3,7 +3,6 @@ package com.rare.pong;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.rare.pong.scenes.Game1v1;
 import com.rare.pong.scenes.MainMenu;
 
 public class Pong extends Game {

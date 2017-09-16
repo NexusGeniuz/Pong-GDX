@@ -4,40 +4,32 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 
-public class Paddle {
-    private float x, y;
-    private float width = 15f;
-    private float height = 100f;
+public abstract class Paddle {
+    protected float x, y;
+    protected float width = 15f;
+    protected float height = 100f;
+    protected float speed = 700f;
+    protected Score score;
     private ShapeRenderer shapeRenderer;
-    private int upKey, downKey;
-    private float speed = 700f;
-    private Score score;
 
-    public Paddle(float x, float y, int upKey, int downKey, Score score) {
+    public Paddle(float x, float y, Score score) {
         this.x = x;
         this.y = y;
-        this.upKey = upKey;
-        this.downKey = downKey;
         this.score = score;
         shapeRenderer = new ShapeRenderer();
     }
 
     public void update(float dt){
-        if(!score.gameOver)
-            handleInput(dt);
+        draw();
+    }
 
+    private void draw(){
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         shapeRenderer.rect(x, y, width, height);
         shapeRenderer.end();
     }
 
-    private void handleInput(float dt){
-        if(Gdx.input.isKeyPressed(upKey)){
-            y += speed * dt;
-        } else if(Gdx.input.isKeyPressed(downKey)){
-            y -= speed * dt;
-        }
-
+    protected void clampY(){
         y = MathUtils.clamp(y, 0, Gdx.graphics.getHeight() - height);
     }
 

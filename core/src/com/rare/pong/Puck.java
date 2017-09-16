@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 
-public class Puck {
+public class Puck { // TODO CHECK FOR CLEANING
     private Vector2 pos = new Vector2(Gdx.graphics.getWidth()/2f - 15f/2f, Gdx.graphics.getHeight()/2f - 15f/2f);
     private Vector2 vel;
     private float size = 15f;
