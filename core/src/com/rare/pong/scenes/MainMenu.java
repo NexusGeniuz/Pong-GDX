@@ -38,7 +38,7 @@ public class MainMenu implements Screen {
         exitButtonOver = new Texture(Gdx.files.internal("buttons/exitbut_o.png"));
         playVsAIButtonNormal = new Texture(Gdx.files.internal("buttons/playvsaibut_n.png"));
         playVsAIButtonOver = new Texture(Gdx.files.internal("buttons/playvsaibut_o.png"));
-        pongLogo = new Texture(Gdx.files.internal("ponglogo.png"));
+        pongLogo = new Texture(Gdx.files.internal("ui elements/ponglogo.png"));
 
         puck = new Puck(null);
     }

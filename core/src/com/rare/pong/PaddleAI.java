@@ -5,7 +5,6 @@ import com.badlogic.gdx.math.MathUtils;
 
 public class PaddleAI extends Paddle {
     private Puck puck;
-    private int offset = 0;
 
     public PaddleAI(float x, float y, Score score, Puck puck) {
         super(x, y, score);
@@ -20,7 +19,7 @@ public class PaddleAI extends Paddle {
         super.update(dt);
     }
 
-    private void handleMovement(float dt){ // AI TODO
+    private void handleMovement(float dt){ // AI
         if(y + height/2 < Gdx.graphics.getHeight()/2 && puck.getPos().y + puck.getSize()/2 > Gdx.graphics.getHeight()/2 && puck.getVel().y > 0)
             speed = maxSpeed;
         else if (y + height/2 > Gdx.graphics.getHeight()/2 && puck.getPos().y + puck.getSize()/2 < Gdx.graphics.getHeight()/2 && puck.getVel().y < 0)

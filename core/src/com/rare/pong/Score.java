@@ -2,6 +2,7 @@ package com.rare.pong;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
@@ -57,6 +58,10 @@ public class Score {
         font80.draw(pong.batch, scoreL + "", Gdx.graphics.getWidth()/4f - numberWidth/2, Gdx.graphics.getHeight() * 0.97f);
         font80.draw(pong.batch, scoreR + "", Gdx.graphics.getWidth() * 0.75f - numberWidth/2, Gdx.graphics.getHeight() * 0.97f);
 
+        if (Gdx.input.isKeyJustPressed(Input.Keys.E)){ // Go back to menu
+            pong.setScreen(new MainMenu(pong));
+        }
+
         if(gameOver){
             font80.draw(pong.batch, "WIN", (scoreL == WIN_SCORE ? Gdx.graphics.getWidth()/4f - winTextWidth/2 : Gdx.graphics.getWidth() * 0.75f - winTextWidth/2), Gdx.graphics.getHeight() * 0.7f);
             font80.draw(pong.batch, "LOSE", (scoreL == WIN_SCORE ? Gdx.graphics.getWidth() * 0.75f - loseTextWidth/2 : Gdx.graphics.getWidth()/4f - loseTextWidth/2), Gdx.graphics.getHeight() * 0.7f);
@@ -65,10 +70,8 @@ public class Score {
             font40.draw(pong.batch, "PRESS E", Gdx.graphics.getWidth() * .25f - pressETextWidth/2, Gdx.graphics.getWidth() * 0.1f);
             font40.draw(pong.batch, "TO GO TO MENU", Gdx.graphics.getWidth() * .75f - toGoToMenuTextWidth/2, Gdx.graphics.getWidth() * 0.1f);
 
-            if(Gdx.input.isKeyJustPressed(Input.Keys.R)){
+            if(Gdx.input.isKeyJustPressed(Input.Keys.R)){ // restart
                 reset();
-            } else if (Gdx.input.isKeyJustPressed(Input.Keys.E)){
-                pong.setScreen(new MainMenu(pong));
             }
         }
         pong.batch.end();
